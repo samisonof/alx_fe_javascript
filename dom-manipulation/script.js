@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showRandomQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         quoteDisplay.textContent = quotes[randomIndex].text;
+        quoteDisplay.innerHTML = `<p>${randomQuote.text}</p><p><strong>Category:</strong> ${randomQuote.category}</p>`;
     }
 
     function populateCategories() {
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display the filtered quotes as needed
     }
 
-    function addQuote() {
+    function createAddQuoteForm() {
         const newQuoteText = document.getElementById('newQuoteText').value.trim();
         const newQuoteCategory = document.getElementById('newQuoteCategory').value.trim();
 
