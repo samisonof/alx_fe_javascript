@@ -151,6 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Quote posted successfully:', data);
         }
     });
+
+    // Assuming you have a function that syncs quotes with the server
+function syncQuotesWithServer() {
+    // Your sync logic here...
+
+    // After syncing, show the message
+    document.getElementById('feedback').textContent = "Quotes synced with server!";
+}
+
     
 // Run tests
 testSyncFunctionality();
