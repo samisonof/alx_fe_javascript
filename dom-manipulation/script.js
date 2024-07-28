@@ -67,6 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function exportQuotes() {
+        const dataStr = JSON.stringify(quotes, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const dataUrl = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'quotes.json';
+        link.click();
+    }
+
+
     loadFromLocalStorage();
     populateCategories();
     filterQuotes();
