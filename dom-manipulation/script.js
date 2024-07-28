@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quoteDisplay = document.getElementById('quoteDisplay');
     const newQuoteButton = document.getElementById('newQuote');
     const categoryFilter = document.getElementById('categoryFilter');
+    const exportQuotesButton = document.getElementById('exportQuotes');
 
     newQuoteButton.addEventListener('click', showRandomQuote);
 
